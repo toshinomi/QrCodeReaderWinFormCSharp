@@ -167,6 +167,7 @@
             this.lblQrCodeText.Size = new System.Drawing.Size(133, 27);
             this.lblQrCodeText.TabIndex = 9;
             this.lblQrCodeText.Text = "QR Code Text";
+            this.lblQrCodeText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FormMain
             // 

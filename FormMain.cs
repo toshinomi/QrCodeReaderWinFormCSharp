@@ -192,7 +192,8 @@ namespace CameraControllWindowsFormCSharp
                     textBoxResult.Text = result.Text;
                 }
 
-                btnGetImage.Enabled = true;
+                OnClickBtnStop(null, null);
+                Invoke(new Action(SetButtonEnable));
             }
 
             pictureBox.Image = bitmap;
@@ -239,6 +240,16 @@ namespace CameraControllWindowsFormCSharp
             ZXing.BarcodeReader reader = new ZXing.BarcodeReader();
             reader.AutoRotate = true;
             return await Task.Run(() => reader.Decode(_bitmap));
+        }
+
+        /// <summary>
+        /// ボタンのEnableを制御する
+        /// </summary>
+        public void SetButtonEnable()
+        {
+            btnGetImage.Enabled = true;
+
+            return;
         }
     }
 }

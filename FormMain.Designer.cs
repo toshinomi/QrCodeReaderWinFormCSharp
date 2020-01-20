@@ -115,6 +115,7 @@
             this.pictureBox.Location = new System.Drawing.Point(12, 152);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(776, 476);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 6;
             this.pictureBox.TabStop = false;
             // 
@@ -149,6 +150,7 @@
             this.btnGetImage.TabIndex = 7;
             this.btnGetImage.Text = "Get Image";
             this.btnGetImage.UseVisualStyleBackColor = true;
+            this.btnGetImage.Click += new System.EventHandler(this.OnClickBtnGetImage);
             // 
             // textBoxResult
             // 
